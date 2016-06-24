@@ -9,20 +9,35 @@ var countUp = function(number) {
 
 // It can identify multiples of 3 within a given string of numbers and replace those values with "ping"
  // It can identify multiples of 5 within a given string of numbers and replace those values with "pong"
+// var replaceThrees = function(number) {
+//   myNumber = [];
+//   for (var i = 0; i < number; i++) {
+//     if ((i + 1) % 3 === 0) {
+//       myNumber.push("ping");
+//     } else if
+//       ((i + 1) % 5 === 0) {
+//         myNumber.push("pong");
+//       } else {
+//       myNumber.push(i + 1);
+//     }
+//     console.log(myNumber);
+//   };
+// };
+
+
+// It can identify multiples of 15 within a given string of numbers and replace those values with "ping-pong"
 var replaceThrees = function(number) {
   myNumber = [];
   for (var i = 0; i < number; i++) {
-    if ((i + 1) % 3 === 0) {
-      myNumber.push("ping");
-    } else if
-      ((i + 1) % 5 === 0) {
-        myNumber.push("pong");
+    if ((i + 1) % 15 === 0) {
+      myNumber.push("ping-pong");
       } else {
       myNumber.push(i + 1);
     }
     console.log(myNumber);
   };
 };
+
 
 
 

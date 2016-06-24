@@ -57,11 +57,6 @@ var replaceAll = function(number) {
 };
 
 
-
-
-
-
-
 // User logic interface
 $(document).ready(function() {
   // interface logic

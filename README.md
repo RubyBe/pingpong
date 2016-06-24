@@ -12,12 +12,12 @@
 
 * It can identify multiples of 3 within a given string of numbers and replace those values with "ping"
   * **Example input:** 6
-  * **Example output:** [1, 2, ping, 4, 5, 6]
+  * **Example output:** [1, 2, ping, 4, 5, ping]
 
 
 * It can identify multiples of 5 within a given string of numbers and replace those values with "pong"
   * **Example input:** 9
-  * **Example output:** [1, 2, 3, 4, pong, 6, 7, 8, pong]
+  * **Example output:** [1, 2, 3, 4, pong, 6, 7, 8, 9, pong]
 
 
 * It can identify multiples of 15 within a given string of numbers and replace those values with "ping-pong"
@@ -27,4 +27,4 @@
 
 * It can prioritize conflicts by understanding that multiples of 5 trump multiples of 3, and multiples of 15 trump multiples of 5, and so when given a string of numbers it can appropriately replace multiples of 3, 5, and 15 with "ping", "pong", and "ping-pong", respectively
   * **Example input:** 30
-  * **Example output:** [1, 2, ping, 4, pong, 6, 7, 8, ping, pong, 11, ping, 13, 14, ping-pong, 16, 17, ping, 19, pong, 21, 22, 23, 24, pong, 26, 27, 28, 29, ping-pong]
+  * **Example output:** [1, 2, ping, 4, pong, ping, 7, 8, ping, pong, 11, ping, 13, 14, ping-pong, 16, 17, ping, 19, pong, ping, 22, 23, ping, pong, 26, ping, 28, 29, ping-pong]

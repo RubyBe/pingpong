@@ -2,8 +2,21 @@
 
 // It can count up to the provided number and return the resulting string of numbers
 var countUp = function(number) {
-  for (var i = 1; i < number + 1; i++) {
-    console.log(i);
+  for (var i = 0; i < number; i++) {
+    console.log(i + 1);
+  };
+};
+
+// It can identify multiples of 3 within a given string of numbers and replace those values with "ping"
+var replaceThrees = function(number) {
+  myNumber = [];
+  for (var i = 0; i < number; i++) {
+    if ((i + 1) % 3 === 0) {
+      myNumber.push("ping");
+    } else {
+      myNumber.push(i + 1);
+    }
+    console.log(myNumber);
   };
 };
 
@@ -26,6 +39,7 @@ $(document).ready(function() {
     event.preventDefault();
     var userInput = parseInt($("#input_text").val());
     countUp(userInput);
+    replaceThrees(userInput);
 
     // var output = rome(userInput);
     // $(".calculated_output").text(output);

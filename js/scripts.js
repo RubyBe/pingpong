@@ -53,7 +53,7 @@ var replaceAll = function(number) {
           myNumber.push(i + 1);
     }
   };
-  console.log(myNumber);
+  return myNumber;
 };
 
 
@@ -68,18 +68,17 @@ $(document).ready(function() {
   $("#input").submit(function(event) {
     event.preventDefault();
     var userInput = parseInt($("#input_text").val());
+    var finalResult = replaceAll(userInput);
 
-    replaceAll(userInput);
-
-    // var output = rome(userInput);
-    // $(".calculated_output").text(output);
-    // $(".my_result").show();
-
-    // alert(userInput);
+    $.each(finalResult, function(i, value) {
+      $(i).text(value);
+      $("ul#replacedList").append("<li>" + value + "</li>");
     });
+    $(".my_result").show();
+  })
 
-  // $("#reset").click(function() {
-  //   $("#input_text").val("");
-  //   $(".my_result").hide();
-  // })
+  $("#reset").click(function() {
+    $("#input_text").val("");
+    $(".my_result").hide();
+  })
 })

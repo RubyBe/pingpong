@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- stylesheets -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/master.css" rel="stylesheet">
+    <!-- scripts -->
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <!-- title -->
+    <title>pingpong</title>
+  </head>
+  <body>
+    <div class="container jumbotron">
+        <h1>Ping-Pong</h1>
+    </div>
+
+    <!-- input field -->
+    <div class="container jumbotron">
+      <div id="this_field">
+        <h4>Please enter your user input for the <span class="project_name"></span> project.</h4>
+      </div>
+      <form id="input">
+        <div class="form-group">
+          <label for="input_text">User Input:</label>
+          <input type="input" id="input_text" class="form-control" type = "text">
+        </div>
+        <button type="submit" class="btn btn-success">Submit input</button>
+      </form>
+    </div>
+
+    <!-- output field -->
+    <div class="container jumbotron my_result">
+      <div id="this_output">
+        <h4>Here is the output for the <span class="project_name"></span> project.</h4>
+      </div>
+    <div class="container calculated_output">
+
+    </div>
+    <br>
+    <div class="output">
+
+      <!-- project specific output goes here -->
+      <form class="form-group">
+        <button type="button" id="reset" class="my_result btn btn-danger">Reset form</button>
+      </form>
+    </div>
+    </div>
+
+  </body>
+</html>

@@ -2,6 +2,7 @@
 
 ## Sid Benavente
 ### pingpong, an epicodus learning project
+[Click](https://rubybe.github.io/pingpong/) to see view the html version of this project.
 
 #### Business Specs for the project
 

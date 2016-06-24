@@ -16,7 +16,7 @@
 
 
 * It can identify multiples of 5 within a given string of numbers and replace those values with "pong"
-  * **Example input:** 9
+  * **Example input:** 10
   * **Example output:** [1, 2, 3, 4, pong, 6, 7, 8, 9, pong]
 
 

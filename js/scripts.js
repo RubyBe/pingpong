@@ -37,18 +37,37 @@
 //   };
 // };
 
+// // It can prioritize conflicts by understanding that multiples of 5 trump multiples of 3, and multiples of 15 trump multiples of 5, and so when given a string of numbers it can appropriately replace multiples of 3, 5, and 15 with "ping", "pong", and "ping-pong", respectively
+// var replaceAll = function(number) {
+//   myNumber = [];
+//   for (var i = 0; i < number; i++) {
+//     if (((i + 1) % 3 === 0) && ((i + 1) % 5 !== 0) && ((i + 1) % 15 !== 0)) {
+//       myNumber.push("ping");
+//     } else if
+//       (((i + 1) % 5 === 0) && ((i + 1) % 15 !== 0)) {
+//         myNumber.push("pong");
+//       } else if
+//         ((i + 1) % 15 === 0) {
+//           myNumber.push("ping-pong");
+//         } else {
+//           myNumber.push(i + 1);
+//     }
+//   };
+//   return myNumber;
+// };
+
 // It can prioritize conflicts by understanding that multiples of 5 trump multiples of 3, and multiples of 15 trump multiples of 5, and so when given a string of numbers it can appropriately replace multiples of 3, 5, and 15 with "ping", "pong", and "ping-pong", respectively
 var replaceAll = function(number) {
   myNumber = [];
   for (var i = 0; i < number; i++) {
-    if (((i + 1) % 3 === 0) && ((i + 1) % 5 !== 0) && ((i + 1) % 15 !== 0)) {
-      myNumber.push("ping");
+    if ((i + 1) % 15 === 0) {
+      myNumber.push("ping-pong");
     } else if
-      (((i + 1) % 5 === 0) && ((i + 1) % 15 !== 0)) {
+      ((i + 1) % 5 === 0) {
         myNumber.push("pong");
       } else if
-        ((i + 1) % 15 === 0) {
-          myNumber.push("ping-pong");
+        ((i + 1) % 3 === 0) {
+          myNumber.push("ping");
         } else {
           myNumber.push(i + 1);
     }
@@ -62,9 +81,12 @@ $(document).ready(function() {
   // interface logic
   $("#input").submit(function(event) {
     event.preventDefault();
+
+    // get user input and pass it to the replacement function; store results in an array
     var userInput = parseInt($("#input_text").val());
     var finalResult = replaceAll(userInput);
 
+    // retrieve results from array and build the html result display list; unhide results section
     $.each(finalResult, function(i, value) {
       $(i).text(value);
       $("ul#replacedList").append("<li>" + value + "</li>");
@@ -72,8 +94,10 @@ $(document).ready(function() {
     $(".my_result").show();
   })
 
+  // clear the input field, empty the results <ul>, and hide the results section
   $("#reset").click(function() {
     $("#input_text").val("");
+    $("ul#replacedList").empty();
     $(".my_result").hide();
   })
 })

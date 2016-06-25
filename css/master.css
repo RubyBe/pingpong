@@ -4,5 +4,10 @@
 
 .jumbotron {
   color: white;
-  background-color: rgba(30, 25, 200, 1);
+  background-color: rgba(30, 125, 100, 1);
+}
+
+li {
+  list-style-type: none;
+  font-size: 18px;
 }

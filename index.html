@@ -12,18 +12,26 @@
     <title>pingpong</title>
   </head>
   <body>
-    <div class="container jumbotron">
+    <div class="container jumbotron" id="jumboHeader">
         <h1>Ping-Pong</h1>
+        <img src="img/pingpong.png" alt="Photo of ping pong tools" height="400"  width="400" />
     </div>
 
     <!-- input field -->
     <div class="container jumbotron">
       <div id="this_field">
-        <h4>Please enter your user input for the <span class="project_name"></span> project.</h4>
+        <h2>Please enter any number</h2>
+        <p>You'll see a count from 1 to your number, with these replacements:</p>
+        <ul>
+          <li>Multiples of 3 will be replaced by "ping"</li>
+          <li>Multiples of 5 will be replaced by "pong"</li>
+          <li>Multiples of 15 will be replaced by "ping-pong"</li>
+        </ul>
+        <p>Replacement of 15 supercedes replacements of 5, and replacements of 5 supercede replacements of 3.</p>
       </div>
       <form id="input">
-        <div class="form-group">
-          <label for="input_text">User Input:</label>
+        <div class="form-group form-group-sm">
+          <label for="input_text"></label>
           <input type="input" id="input_text" class="form-control" type = "text">
         </div>
         <button type="submit" class="btn btn-success">Submit input</button>
@@ -33,7 +41,7 @@
     <!-- output field -->
     <div class="container jumbotron my_result">
       <div class="container">
-        <h4>Your ping, pong, and ping-pongs:</h4>
+        <h3>Your ping, pong, and ping-pongs:</h3>
         <ul id = "replacedList">
 
         </ul>

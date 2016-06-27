@@ -96,19 +96,30 @@ $(document).ready(function() {
     // This should be refactored using an additional (recursive?) function and moved to business logic section
     // TODO
     var firstChunkedArray = chunkedArrays(finalResult, 0, finalResult.length/4);
-    console.log(firstChunkedArray);
     var secondChunkedArray = chunkedArrays(finalResult, finalResult.length/4, 2*(finalResult.length/4));
-    console.log(secondChunkedArray);
     var thirdChunkedArray = chunkedArrays(finalResult, 2*(finalResult.length/4), 3*(finalResult.length/4));
-    console.log(thirdChunkedArray);
     var fourthChunkedArray = chunkedArrays(finalResult, 3*(finalResult.length/4), finalResult.length);
-    console.log(fourthChunkedArray);
 
-    // retrieve results from array and build the html result display list; unhide results section
-    $.each(finalResult, function(i, value) {
+    // retrieve results from arrays and build the html result display list; unhide results section
+    // results are displayed in columns, one for each array
+    $.each(firstChunkedArray, function(i, value) {
       $(i).text(value);
-      $("ul#replacedList").append("<li>" + value + "</li>");
+      $("ul#firstList").append("<li>" + value + "</li>");
     });
+    $.each(secondChunkedArray, function(i, value) {
+      $(i).text(value);
+      $("ul#secondList").append("<li>" + value + "</li>");
+    });
+    $.each(thirdChunkedArray, function(i, value) {
+      $(i).text(value);
+      $("ul#thirdList").append("<li>" + value + "</li>");
+    });
+    $.each(fourthChunkedArray, function(i, value) {
+      $(i).text(value);
+      $("ul#fourthList").append("<li>" + value + "</li>");
+    });
+
+
     $(".my_result").show();
   })
 

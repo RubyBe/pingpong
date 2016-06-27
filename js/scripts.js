@@ -56,6 +56,7 @@
 //   return myNumber;
 // };
 
+
 // It can prioritize conflicts by understanding that multiples of 5 trump multiples of 3, and multiples of 15 trump multiples of 5, and so when given a string of numbers it can appropriately replace multiples of 3, 5, and 15 with "ping", "pong", and "ping-pong", respectively
 var replaceAll = function(number) {
   myNumber = [];
@@ -75,6 +76,12 @@ var replaceAll = function(number) {
   return myNumber;
 };
 
+// It can chunk the final array so that it can be displayed in multiple columns
+var chunkedArrays = function(array, start, end) {
+  var myChunk = array.slice(start, end);
+  return myChunk;
+}
+
 
 // User logic interface
 $(document).ready(function() {
@@ -85,6 +92,17 @@ $(document).ready(function() {
     // get user input and pass it to the replacement function; store results in an array
     var userInput = parseInt($("#input_text").val());
     var finalResult = replaceAll(userInput);
+
+    // This should be refactored using an additional (recursive?) function and moved to business logic section
+    // TODO
+    var firstChunkedArray = chunkedArrays(finalResult, 0, finalResult.length/4);
+    console.log(firstChunkedArray);
+    var secondChunkedArray = chunkedArrays(finalResult, finalResult.length/4, 2*(finalResult.length/4));
+    console.log(secondChunkedArray);
+    var thirdChunkedArray = chunkedArrays(finalResult, 2*(finalResult.length/4), 3*(finalResult.length/4));
+    console.log(thirdChunkedArray);
+    var fourthChunkedArray = chunkedArrays(finalResult, 3*(finalResult.length/4), finalResult.length);
+    console.log(fourthChunkedArray);
 
     // retrieve results from array and build the html result display list; unhide results section
     $.each(finalResult, function(i, value) {

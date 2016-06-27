@@ -29,3 +29,12 @@
 * It can prioritize conflicts by understanding that multiples of 5 trump multiples of 3, and multiples of 15 trump multiples of 5, and so when given a string of numbers it can appropriately replace multiples of 3, 5, and 15 with "ping", "pong", and "ping-pong", respectively
   * **Example input:** 30
   * **Example output:** [1, 2, ping, 4, pong, ping, 7, 8, ping, pong, 11, ping, 13, 14, ping-pong, 16, 17, ping, 19, pong, ping, 22, 23, ping, pong, 26, ping, 28, 29, ping-pong]
+
+
+* It can chunk the final array into 4 separate arrays so that results can be displayed in 4 columns to the user
+  * **Example input:** 30
+  * **Example output:**
+                        [1, 2, "ping", 4, "pong", "ping", 7, 8, "ping", "pong", 11, "ping"]
+        [13, 14, "ping-pong", 16, 17, "ping", 19, "pong", "ping", 22, 23, "ping", "pong"]
+        [26, "ping", 28, 29, "ping-pong", 31, 32, "ping", 34, "pong", "ping", 37]
+        [38, "ping", "pong", 41, "ping", 43, 44, "ping-pong", 46, 47, "ping", 49, "pong"]

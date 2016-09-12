@@ -39,8 +39,8 @@
         [26, "ping", 28, 29, "ping-pong", 31, 32, "ping", 34, "pong", "ping", 37]
         [38, "ping", "pong", 41, "ping", 43, 44, "ping-pong", 46, 47, "ping", 49, "pong"]
 
-* License
+## License
 
-Copyright (c) 2016 Sid Benavente
+### Copyright (c) 2016 Sid Benavente
 
-This software is licensed under the MIT license.
+### This software is licensed under the MIT license.
